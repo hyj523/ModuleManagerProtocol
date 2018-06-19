@@ -16,6 +16,7 @@
 		20E2CB0B20D8FAED00753E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB0A20D8FAED00753E46 /* main.m */; };
 		20E2CB1520D8FAED00753E46 /* ModuleManagerProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB1420D8FAED00753E46 /* ModuleManagerProtocolTests.m */; };
 		20E2CB2020D8FAED00753E46 /* ModuleManagerProtocolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB1F20D8FAED00753E46 /* ModuleManagerProtocolUITests.m */; };
+		20E2CB3020D8FD1300753E46 /* ModuleManagerProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB2F20D8FD1300753E46 /* ModuleManagerProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		20E2CB1B20D8FAED00753E46 /* ModuleManagerProtocolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuleManagerProtocolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E2CB1F20D8FAED00753E46 /* ModuleManagerProtocolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleManagerProtocolUITests.m; sourceTree = "<group>"; };
 		20E2CB2120D8FAED00753E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20E2CB2E20D8FD1300753E46 /* ModuleManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleManagerProtocol.h; sourceTree = "<group>"; };
+		20E2CB2F20D8FD1300753E46 /* ModuleManagerProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleManagerProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		20E2CAF720D8FAEC00753E46 /* ModuleManagerProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				20E2CB2D20D8FCFB00753E46 /* ModuleManagerProtocol */,
 				20E2CAF820D8FAEC00753E46 /* AppDelegate.h */,
 				20E2CAF920D8FAEC00753E46 /* AppDelegate.m */,
 				20E2CAFB20D8FAEC00753E46 /* ViewController.h */,
@@ -133,6 +137,15 @@
 				20E2CB2120D8FAED00753E46 /* Info.plist */,
 			);
 			path = ModuleManagerProtocolUITests;
+			sourceTree = "<group>";
+		};
+		20E2CB2D20D8FCFB00753E46 /* ModuleManagerProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				20E2CB2E20D8FD1300753E46 /* ModuleManagerProtocol.h */,
+				20E2CB2F20D8FD1300753E46 /* ModuleManagerProtocol.m */,
+			);
+			path = ModuleManagerProtocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +284,7 @@
 				20E2CAFD20D8FAEC00753E46 /* ViewController.m in Sources */,
 				20E2CB0320D8FAEC00753E46 /* ModuleManagerProtocol.xcdatamodeld in Sources */,
 				20E2CB0B20D8FAED00753E46 /* main.m in Sources */,
+				20E2CB3020D8FD1300753E46 /* ModuleManagerProtocol.m in Sources */,
 				20E2CAFA20D8FAEC00753E46 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
