@@ -16,7 +16,7 @@
 		20E2CB0B20D8FAED00753E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB0A20D8FAED00753E46 /* main.m */; };
 		20E2CB1520D8FAED00753E46 /* ModuleManagerProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB1420D8FAED00753E46 /* ModuleManagerProtocolTests.m */; };
 		20E2CB2020D8FAED00753E46 /* ModuleManagerProtocolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB1F20D8FAED00753E46 /* ModuleManagerProtocolUITests.m */; };
-		20E2CB3020D8FD1300753E46 /* ModuleManagerProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2CB2F20D8FD1300753E46 /* ModuleManagerProtocol.m */; };
+		83ADAD00370936F143490328 /* libPods-ModuleManagerProtocol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BFA73104168996F0BD1BCC /* libPods-ModuleManagerProtocol.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,9 @@
 		20E2CB1B20D8FAED00753E46 /* ModuleManagerProtocolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuleManagerProtocolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E2CB1F20D8FAED00753E46 /* ModuleManagerProtocolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleManagerProtocolUITests.m; sourceTree = "<group>"; };
 		20E2CB2120D8FAED00753E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20E2CB2E20D8FD1300753E46 /* ModuleManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleManagerProtocol.h; sourceTree = "<group>"; };
-		20E2CB2F20D8FD1300753E46 /* ModuleManagerProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleManagerProtocol.m; sourceTree = "<group>"; };
+		6EE2228BBC86A4901EF53760 /* Pods-ModuleManagerProtocol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleManagerProtocol.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModuleManagerProtocol/Pods-ModuleManagerProtocol.release.xcconfig"; sourceTree = "<group>"; };
+		B4BFA73104168996F0BD1BCC /* libPods-ModuleManagerProtocol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ModuleManagerProtocol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D86255DDCCAF6FA5584C295D /* Pods-ModuleManagerProtocol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleManagerProtocol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModuleManagerProtocol/Pods-ModuleManagerProtocol.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ADAD00370936F143490328 /* libPods-ModuleManagerProtocol.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +92,8 @@
 				20E2CB1320D8FAED00753E46 /* ModuleManagerProtocolTests */,
 				20E2CB1E20D8FAED00753E46 /* ModuleManagerProtocolUITests */,
 				20E2CAF620D8FAEC00753E46 /* Products */,
+				AF43DF88494F7482E4BE9C6A /* Pods */,
+				FDF9C22C98532C57FD2C4828 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,10 +146,25 @@
 		20E2CB2D20D8FCFB00753E46 /* ModuleManagerProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				20E2CB2E20D8FD1300753E46 /* ModuleManagerProtocol.h */,
-				20E2CB2F20D8FD1300753E46 /* ModuleManagerProtocol.m */,
 			);
 			path = ModuleManagerProtocol;
+			sourceTree = "<group>";
+		};
+		AF43DF88494F7482E4BE9C6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D86255DDCCAF6FA5584C295D /* Pods-ModuleManagerProtocol.debug.xcconfig */,
+				6EE2228BBC86A4901EF53760 /* Pods-ModuleManagerProtocol.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDF9C22C98532C57FD2C4828 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4BFA73104168996F0BD1BCC /* libPods-ModuleManagerProtocol.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20E2CB2420D8FAED00753E46 /* Build configuration list for PBXNativeTarget "ModuleManagerProtocol" */;
 			buildPhases = (
+				48A466113E9064CCD071A842 /* [CP] Check Pods Manifest.lock */,
 				20E2CAF120D8FAEC00753E46 /* Sources */,
 				20E2CAF220D8FAEC00753E46 /* Frameworks */,
 				20E2CAF320D8FAEC00753E46 /* Resources */,
@@ -276,6 +296,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48A466113E9064CCD071A842 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModuleManagerProtocol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20E2CAF120D8FAEC00753E46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -284,7 +325,6 @@
 				20E2CAFD20D8FAEC00753E46 /* ViewController.m in Sources */,
 				20E2CB0320D8FAEC00753E46 /* ModuleManagerProtocol.xcdatamodeld in Sources */,
 				20E2CB0B20D8FAED00753E46 /* main.m in Sources */,
-				20E2CB3020D8FD1300753E46 /* ModuleManagerProtocol.m in Sources */,
 				20E2CAFA20D8FAEC00753E46 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +486,7 @@
 		};
 		20E2CB2520D8FAED00753E46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D86255DDCCAF6FA5584C295D /* Pods-ModuleManagerProtocol.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +501,7 @@
 		};
 		20E2CB2620D8FAED00753E46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE2228BBC86A4901EF53760 /* Pods-ModuleManagerProtocol.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
