@@ -9,8 +9,10 @@
 #import "AViewController.h"
 #import <HandyFrame/UIView+LayoutMethods.h>
 #import <B_Category/CTMediator+B.h>
-@interface AViewController ()
+#import "CustomCell.h"
+@interface AViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIButton *pushBViewControllerButton;
+@property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation AViewController
@@ -19,6 +21,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.pushBViewControllerButton];
+    [self creatTabaleView];
     // Do any additional setup after loading the view.
 }
 - (void)viewWillLayoutSubviews
@@ -40,6 +43,33 @@
         [_pushBViewControllerButton addTarget:self action:@selector(didTappedPushBViewControllerButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _pushBViewControllerButton;
+}
+- (void)creatTabaleView
+{
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CustomCell" bundle:nil ] forCellReuseIdentifier:@"customcell"];
+}
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"customcell"];
+    cell.CustomLabel.text=@"自定义lable";
+    return cell;
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
