@@ -94,8 +94,8 @@ Pod::Spec.new do |s|
   s.source_files  = "ModuleManagerProtocol/ModuleManagerProtocol/**/*.{h,m}"
 
 #s.resource_bundles = {
-'ModuleManagerProtocol' => ['ModuleManagerProtocol/ModuleManagerProtocol/**/*.{storyboard,xib}']
-}
+#'ModuleManagerProtocol' => ['ModuleManagerProtocol/ModuleManagerProtocol/**/*.{storyboard,xib}']
+#}
 # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
