@@ -10,6 +10,7 @@
 #import <HandyFrame/UIView+LayoutMethods.h>
 #import <B_Category/CTMediator+B.h>
 #import "CustomCell.h"
+#define kZLPhotoBrowserBundle [NSBundle bundleForClass:[self class]]
 @interface AViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIButton *pushBViewControllerButton;
 @property (nonatomic, strong) UITableView *tableView;
@@ -50,7 +51,9 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-    [self.tableView registerNib:[UINib nibWithNibName:@"CustomCell" bundle:[NSBundle bundleWithPath:[NSBundle bundleForClass:[self class]]]] forCellReuseIdentifier:@"customcell"];
+    [[kZLPhotoBrowserBundle loadNibNamed:@"CustomCell" owner:self options:nil] lastObject];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CustomCell" bundle:kZLPhotoBrowserBundle] forCellReuseIdentifier:@"customcell"];
+   
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
