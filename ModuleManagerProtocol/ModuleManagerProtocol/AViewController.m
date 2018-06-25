@@ -50,7 +50,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-    [self.tableView registerNib:[UINib nibWithNibName:@"CustomCell" bundle:nil ] forCellReuseIdentifier:@"customcell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CustomCell" bundle:[NSBundle bundleWithPath:[NSBundle bundleForClass:[self class]]]] forCellReuseIdentifier:@"customcell"];
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
