@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ModuleManagerProtocol"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "this is ModuleManagerProtocol."
 
   # This description is used to generate tags and improve search results.
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "ModuleManagerProtocol/ModuleManagerProtocol/**/*.{h,m}"
-    s.resources = 'ModuleManagerProtocol/ModuleManagerProtocol/*.xib'
+
 #s.resource_bundles = {
 'ModuleManagerProtocol' => ['ModuleManagerProtocol/ModuleManagerProtocol/**/*.{storyboard,xib}']
 }
@@ -110,7 +110,8 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+
+s.resources = 'ModuleManagerProtocol/ModuleManagerProtocol/*.xib'
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
